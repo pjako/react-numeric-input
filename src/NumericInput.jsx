@@ -498,7 +498,7 @@ class NumericInput extends React.Component
      */
     _format(n: number): string
     {
-        let _n = this._toNumber(n).toFixed(this.props.precision);
+        let _n = this._toNumber(n);
 
         if (this.props.format) {
             return this.props.format(_n);
