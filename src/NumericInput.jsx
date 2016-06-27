@@ -498,13 +498,11 @@ class NumericInput extends React.Component
      */
     _format(n: number): string
     {
-        let _n = this._toNumber(n);
-
         if (this.props.format) {
-            return this.props.format(_n);
+            return this.props.format(n);
         }
 
-        return _n;
+        return this._toNumber(n);
     }
 
     /**
